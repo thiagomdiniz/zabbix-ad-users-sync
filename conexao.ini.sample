@@ -7,6 +7,12 @@ log_level = INFO
 # Grupo que todo usuario importado do AD faz parte:
 default_group = Users from AD
 
+# Grupos nos quais os usuarios serao do tipo Zabbix Admin (to do)
+#admin_groups =
+#	Monitoracao - Zabbix Admins
+# Grupos nos quais os usuarios serao do tipo Zabbix Super Admin (to do)
+#superadmin_groups = 
+#	Monitoracao - Zabbix Super Admins
 
 [ad]
 host = ldap://yourdomain.com
