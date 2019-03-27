@@ -1,0 +1,29 @@
+[zabbix]
+host = https://zabbix.yourdomain.com/
+username = zabbix_user
+password = zabbix_passwd
+log_level = INFO
+
+# Grupo que todo usuario importado do AD faz parte:
+default_group = Users from AD
+
+
+[ad]
+host = ldap://yourdomain.com
+bind_dn = CN=zabbix,OU=Service Accounts,DC=yourdomain,DC=com
+bind_pw = ad_passwd
+users_ou = DC=yourdomain,DC=com
+groups_ou = OU=Grupos,DC=yourdomain,DC=com
+log_level = INFO
+
+# Prefixo do groupname no AD a ser omitido no Zabbix:
+filter_group_search_zb = 'Monitoracao - '
+
+# Sufixo a ser adicionado no groupname AD ao ser inserido no Zabbix:
+filter_group_suffix_zb = ' (AD)'
+
+# Groupnames a serem usados nos filtros do AD:
+filter_group_search =
+    Monitoracao - Your Group 1
+    Monitoracao - Your Group 2
+    Monitoracao - Your Group N
